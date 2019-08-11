@@ -1,0 +1,10 @@
+<div class="shell-wrapper">
+    <div class="shell-nav">
+        <img src="assets/close_shell.png" alt="Close" id="close" (click)="close()"/>
+        <img src="assets/minimize_shell.png" alt="Minimize" id="minimize"/>
+    </div>
+    <div class="shell-content">
+            <span *ngFor="let item of count">{{ explorer }}&nbsp;<span class="commands">{{ item }}</span><br></span>
+            {{ explorer }}&nbsp;<input #item type="text" (keyup.enter)="execute(item.value)">
+    </div>
+</div>

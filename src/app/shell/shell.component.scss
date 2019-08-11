@@ -1,0 +1,41 @@
+$golden-ratio : 1.68em;
+
+
+.shell-wrapper {
+    width: 40%;
+    height: 500px;
+    background: #4D4D4D;
+    border-radius: .4em;
+    .shell-nav{
+        position: relative;
+        border-radius: .4em .4em 0 0;
+        background: #DFDFDF;
+        color: rgb(0, 0, 0);
+        height: $golden-ratio;
+        width: 100%;
+        img {
+            width: 1.1em;
+            padding: .3em .0em .2em .4em;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+    .shell-content{
+        padding: 1em;
+        color: #13b93f;
+        input{
+            background: transparent;
+            outline: none;
+            border: none;
+            color: white;
+            font-size: 1em;
+        }
+        .commands{
+            color: white;
+            font-size: 1em;
+        }
+    }
+    
+}
