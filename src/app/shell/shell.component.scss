@@ -2,7 +2,6 @@ $golden-ratio : 1.68em;
 
 
 .shell-wrapper {
-    width: 40%;
     height: 500px;
     background: #4D4D4D;
     border-radius: .4em;
@@ -14,7 +13,7 @@ $golden-ratio : 1.68em;
         height: $golden-ratio;
         width: 100%;
         img {
-            width: 1.1em;
+            width: 1.3em;
             padding: .3em .0em .2em .4em;
             cursor: pointer;
             &:hover{
