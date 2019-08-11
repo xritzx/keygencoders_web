@@ -1,0 +1,35 @@
+.console-container{
+    width: 100%;
+    .console-topbar{
+        background-color: #777;
+        display: flex;
+        .circle-red, .circle-yellow{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 900px;
+            width: 30px;
+            height:30px;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 10px 4px;
+            text-align: center;
+            cursor: default;
+        }
+        .circle-red{
+            background-color: #B83227;
+            margin-left: 12px;
+        }
+        .circle-yellow{
+            background-color: #F4C724;
+            color: black;
+        }
+    }
+    .console-body{
+        height: 183px;
+        background-color: #222;
+        padding: 20px 40px;
+        color: greenyellow;
+        outline: none;
+    }
+}
