@@ -4,7 +4,7 @@
         <img src="assets/minimize_shell.png" alt="Minimize" id="minimize"/>
     </div>
     <div class="shell-content">
-            <span *ngFor="let item of count">{{ explorer }}&nbsp;<span class="commands">{{ item }}</span><br></span>
+            <span *ngFor="let item of count"><span class="shebang">{{ explorer }}</span>&nbsp;<span class="commands">{{ item }}</span><br></span>
             {{ explorer }}&nbsp;<input #item type="text" (keyup.enter)="execute(item.value)">
     </div>
 </div>

@@ -24,6 +24,9 @@ $golden-ratio : 1.68em;
     .shell-content{
         padding: 1em;
         color: #13b93f;
+        .shebang {
+            color: #13aa3b;
+        }
         input{
             background: transparent;
             outline: none;

@@ -8,11 +8,13 @@ import { Router, Route } from "@angular/router"
 })
 export class HomepageComponent implements OnInit {
 
+  routes: Array<String> = [];
   constructor(private router: Router) { }
 
   ngOnInit() {
     this.router.config.forEach(element => {
-      console.log(element)
+      console.log(element);
+      this.routes.push(element.path);
     });
   }
 

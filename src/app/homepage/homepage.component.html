@@ -8,10 +8,6 @@
         <br>
         <p>KeyGEn CBash v-1.0.0(x86-64-pc-msys)</p>
         <br>
-        <p>events[-e]</p>
-        <p>about[-a]</p>
-        <p>news[-n]</p>
-        <p>members[-m]</p>
-        <p>contact[-c]</p>
+        <p *ngFor="let route of routes">{{ route }}</p>
     </div>
 </div>
