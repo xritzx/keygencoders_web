@@ -1,7 +1,8 @@
-<div class="shell-wrapper">
+<img id="terminal" src="assets/terminal-512.png" alt="terminal" (click)="expand()"/>
+<div class="shell-wrapper" [ngStyle]="{'height': minimized?'200px':'500px', 'display': closed?'none':'inherit'}">
     <div class="shell-nav">
         <img src="assets/close_shell.png" alt="Close" id="close" (click)="close()"/>
-        <img src="assets/minimize_shell.png" alt="Minimize" id="minimize"/>
+        <img src="assets/minimize_shell.png" alt="Minimize" id="minimize" (click)="minimize()"/>
     </div>
     <div class="shell-content">
             <span *ngFor="let item of count"><span class="shebang">{{ explorer }}</span>&nbsp;<span class="commands">{{ item }}</span><br></span>

@@ -7,10 +7,16 @@ import { Router, Route } from '@angular/router';
   styleUrls: ['./shell.component.scss']
 })
 export class ShellComponent implements OnInit {
-  explorer: String = '# keygen@/~$';
+  explorer = '# keygen@/~$';
+  // Terminal UI State
+  minimized = false;
+  closed = false;
+  // Command history
   count: Array<any> = [];
+  commandsCount = 13; // Total no. of command visible to end user
+  // Possible routes
   routes: Array<any> = this.routeList(this.router.config);
-  commandsCount: Number = 13; // Total no. of command visible to end user
+
 
   constructor(private router: Router) { }
 
@@ -26,10 +32,11 @@ export class ShellComponent implements OnInit {
     return routeList;
   }
 
+  // Command execution function that redirects to the possible route
   execute(data: any) {
     // console.log(data);
     data = data.toLowerCase();
-    if (this.count.length > 13) {
+    while (this.count.length > this.commandsCount) {
       this.count.shift();
     }
     // console.log(this.routes);
@@ -43,6 +50,25 @@ export class ShellComponent implements OnInit {
       if (data.includes('fuck')) { this.count.push('KeyGEn CBash v1.0.0 doesn\'t approve your F-word ☹️');
       } else { this.count.push('Error : 404 ¯\\_(ツ)_/¯'); }
     }
+  }
+
+  // Terminal UI functionalities
+  close() {
+    this.closed = true;
+    this.minimized = false;
+  }
+  minimize() {
+    this.closed = false;
+    this.minimized = true;
+    this.commandsCount = 3;
+    while (this.count.length > this.commandsCount) {
+      this.count.shift();
+    }
+  }
+  expand() {
+    this.closed = false;
+    this.minimized = false;
+    this.commandsCount = 13;
   }
 
 }

@@ -1,6 +1,11 @@
 $golden-ratio : 1.68em;
 
-
+#terminal {
+    width: 3em;
+    display: grid;
+    margin: 1em auto;
+    cursor: pointer;
+}
 .shell-wrapper {
     height: 500px;
     background: #4D4D4D;
@@ -25,7 +30,7 @@ $golden-ratio : 1.68em;
         padding: 1em;
         color: #13b93f;
         .shebang {
-            color: #13aa3b;
+            color: #13aa3b; 
         }
         input{
             background: transparent;
@@ -39,5 +44,4 @@ $golden-ratio : 1.68em;
             font-size: 1em;
         }
     }
-    
 }
