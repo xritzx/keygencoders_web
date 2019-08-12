@@ -4,5 +4,11 @@
     </div>
     <div class="body">
         These are the members we are absolutely proud about!
+        <br>
+        <ul>
+            <li *ngFor="let item of members | async">
+               {{ item | json }}
+            </li>
+        </ul>
     </div>
 </div>

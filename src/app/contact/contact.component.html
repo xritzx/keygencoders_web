@@ -4,5 +4,11 @@
     </div>
     <div class="body">
         Contact us via our facebook page!
+        <br>
+        <ul>
+            <li *ngFor="let item of contact | async">
+               {{ item | json }}
+            </li>
+        </ul>
     </div>
 </div>

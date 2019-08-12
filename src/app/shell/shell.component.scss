@@ -10,6 +10,7 @@ $golden-ratio : 1.68em;
     height: 500px;
     background: #4D4D4D;
     border-radius: .4em;
+    transition: all .5s;
     .shell-nav{
         position: relative;
         border-radius: .4em .4em 0 0;

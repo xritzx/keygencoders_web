@@ -3,6 +3,12 @@
         <h1>About</h1>
     </div>
     <div class="body">
-        You need not to know about us that much!
+        You need not to know about us that much but still!
+        <br>
+        <ul>
+            <li *ngFor="let item of about | async">
+               {{ item | json }}
+            </li>
+        </ul>
     </div>
 </div>

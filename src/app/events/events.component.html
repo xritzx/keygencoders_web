@@ -5,5 +5,11 @@
     <div class="body">
         <!-- Integrate DB Service worker -->
         Here will be some info about the upcoming events!
+        <br>
+        <ul>
+            <li *ngFor="let item of events | async">
+               {{ item | json }}
+            </li>
+        </ul>
     </div>
 </div>

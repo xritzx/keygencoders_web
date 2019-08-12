@@ -10,6 +10,10 @@ import { EventsComponent } from './events/events.component';
 import { MembersComponent } from './members/members.component';
 import { ShellComponent } from './shell/shell.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,9 @@ import { ShellComponent } from './shell/shell.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase, 'keygencoders-web'),
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

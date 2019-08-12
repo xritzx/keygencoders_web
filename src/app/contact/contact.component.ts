@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from '../database.service';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  contact: Observable<any[]>;
+
+  constructor(private db: DatabaseService) { }
 
   ngOnInit() {
+    this.contact = this.db.getContact().valueChanges();
   }
-
 }

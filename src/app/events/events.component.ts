@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from '../database.service';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-events',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
-  constructor() { }
+  events: Observable<any[]>;
+
+  constructor(private db: DatabaseService) { }
 
   ngOnInit() {
+    this.events = this.db.getEvents().valueChanges();
   }
+
+
 
 }
