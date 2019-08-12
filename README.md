@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# How to commit to repository
+
+1. Fork it from https://github.com/xritzx/keygencoders_web.git
+2. Pull the forked repository to your machine
+3. Make your changes 
+4. commit your changes
+5. Add the main repository as upstream using this command
+```
+    git remote add origin https://github.com/xritzx/keygencoders_web.git
+```
+6. Pull from upstream and then push the entire repo to your forked repo
+7. Make pull request
